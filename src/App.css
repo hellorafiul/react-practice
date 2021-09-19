@@ -28,6 +28,75 @@
   color: #61dafb;
 }
 
+
+/* Custom CSS */
+.main-div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 100px;
+  grid-gap: 10px;
+}
+
+.blog{
+  background-color: #61dafb;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #14b6b6;
+  border-radius: 20px;
+  font-style: ;
+}
+
+.button {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  border-radius: 10rem;
+  background-color: #61DAFB;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: .15rem;
+  border: 0;
+  color: blueviolet;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.button:hover {
+  color: #61DAFB;
+  background-color: blueviolet;
+  transition: .5s ease-in-out;
+
+}
+
+/* optional reset for presentation */
+* {
+  font-family: Arial;
+  text-decoration: none;
+  font-size: 20px;
+}
+.container {
+  padding-top: 50px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: .8rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+span {
+  display: block;
+  margin-top: 2rem;
+  font-size: .7rem;
+  color: #777;
+  a {
+    font-size: .7rem;
+    color: #999;
+    text-decoration: underline;
+  }
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
