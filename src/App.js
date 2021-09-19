@@ -28,16 +28,19 @@ function Countries() {
   return (
     <div>
       <h1>Traveling around the world</h1>
-      {
-        countries.map(country => <Country flag={country.flag} name={country.name} capital={country.capital} population={country.population}></Country>)
-      }
+      <div className="country">
+        {
+          countries.map(country => <Country flag={country.flag} name={country.name} capital={country.capital} population={country.population}></Country>)
+        }
+      </div>
+
     </div>
   )
 }
 
 function Country(props) {
   return (
-    <div className="country">
+    <div>
       <div>
         <div><img src={props.flag} alt="" /></div>
         <div><h1>Name: {props.name}</h1>
