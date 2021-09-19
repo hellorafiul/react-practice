@@ -6,15 +6,48 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Article></Article>
+        {/* <Article></Article>
         <Blog heading='The Miracle Morning' author='Book by Hal Elrod'></Blog>
         <Mobile></Mobile>
-        <ToDo></ToDo>
+        <ToDo></ToDo> */}
 
+        <Countries></Countries>
       </header>
     </div>
   );
 }
+
+
+function Countries() {
+  const [countries, setCountries] = useState([]);
+  useEffect(() => {
+    fetch('https://restcountries.eu/rest/v2/all')
+      .then(res => res.json())
+      .then(data => setCountries(data))
+  }, [])
+  return (
+    <div>
+      <h1>Traveling around the world</h1>
+      {
+        countries.map(country => <Country flag={country.flag} name={country.name} capital={country.capital} population={country.population}></Country>)
+      }
+    </div>
+  )
+}
+
+function Country(props) {
+  return (
+    <div className="country">
+      <div>
+        <div><img src={props.flag} alt="" /></div>
+        <div><h1>Name: {props.name}</h1>
+          <h2>Capital of: {props.capital}</h2>
+          <h2>Number of population: {props.population}</h2></div>
+      </div>
+    </div>
+  )
+};
+
 
 // ১১. json placeholder এর ওয়েবসাইট এ গিয়ে todo এর ডাটা লোড করে। সেগুলাকে দেখাতে পারো কিনা দেখো। 
 
